@@ -1,51 +1,12 @@
-# BrewMetrics BI
-
-A version-controlled Business Intelligence solution for BrewMetrics Coffee Co. using Power BI, GitHub, and GitHub Copilot.
+# BrewMetrics BI Project
 
 ## Project Overview
-
-BrewMetrics Coffee Co. operates Flagship stores, Kiosks, and Drive-Thrus across four cities. This project analyzes sales data from April to June to identify sales trends, seasonal patterns, product performance, and differences in city-level performance.
-
-The project is developed using a version-controlled workflow so that changes to the data model, DAX measures, dashboard, and documentation can be tracked through Git commits.
-
-## Tools Used
-
-- Power BI Desktop
-- Power BI Project (.pbip)
-- GitHub
-- GitHub Desktop / Git
-- Visual Studio Code
-- GitHub Copilot
-- Power Query
-- DAX
-
-## Dataset
-
-The project uses the `brewmetrics_sales.csv` dataset.
-
-The dataset contains transaction-level sales information including:
-
-- Date
-- City
-- Store Format
-- Category
-- Item
-- Quantity
-- Unit Price
-- Sales Amount
-
-The data contains approximately 15,500 transactions covering April to June.
+This project was developed using Power BI to analyze sales performance for BrewMetrics Coffee Co. The dashboard helps managers understand monthly sales trends, product performance, and city-wise sales distribution.
 
 ## Data Model
 
-The flat sales data is transformed into a Star Schema.
-
-### Fact Table
-
-**Fact_Sales**
-
-Contains transaction-level sales information such as:
-
+### Fact_Sales
+Contains transaction-level sales data including:
 - Date
 - City
 - Store Format
@@ -54,33 +15,22 @@ Contains transaction-level sales information such as:
 - Unit Price
 - Sales Amount
 
-### Dimension Tables
+### Dim_Date
+Contains date information used for time-based analysis.
 
-**Dim_Date**
+### Dim_City
+Contains city and store format details.
 
-Contains date-related information such as:
+### Dim_Product
+Contains product category and item information.
 
-- Date
-- Year
-- Month
-- Month Number
-- Day
+## Dashboard Features
+- Monthly Sales Trend Analysis
+- Product Sales Analysis
+- City Performance Analysis
+- Category Filter (Slicer)
 
-**Dim_City**
-
-Contains city information used for city-level analysis.
-
-**Dim_Product**
-
-Contains product and category information used for product-level analysis.
-
-### Star Schema
-
-```text
-                 Dim_Date
-                    |
-                    |
-Dim_City ---- Fact_Sales ---- Dim_Product
-                    |
-                    |
-              Store Format
+## Key Insights
+1. Bengaluru recorded the highest sales among all cities.
+2. Product sales varied across different categories and items.
+3. Monthly sales were highest during May and declined in July.
