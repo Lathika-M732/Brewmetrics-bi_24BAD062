@@ -1,5 +1,3 @@
-# Brewmetrics-bi
-
 # BrewMetrics BI
 
 A version-controlled Business Intelligence solution for BrewMetrics Coffee Co. using Power BI, GitHub, and GitHub Copilot.
